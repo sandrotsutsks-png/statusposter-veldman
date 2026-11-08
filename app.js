@@ -17,3 +17,5 @@ modal.querySelector('.close').addEventListener('click',()=>modal.close());modal.
 const progress=document.querySelector('.scroll-progress');let queued=false;function update(){const h=document.documentElement;progress.style.width=(h.scrollTop/Math.max(1,h.scrollHeight-h.clientHeight)*100)+'%';queued=false;}window.addEventListener('scroll',()=>{if(!queued){queued=true;requestAnimationFrame(update);}},{passive:true});update();
 const links=[...document.querySelectorAll('.topbar nav a')];const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)links.forEach(a=>a.classList.toggle('active',a.hash==='#'+e.target.id));}),{rootMargin:'-15% 0px -50% 0px'});links.forEach(a=>obs.observe(document.querySelector(a.hash)));
 let printStates=[];addEventListener('beforeprint',()=>{printStates=[...document.querySelectorAll('details')].map(d=>[d,d.open]);printStates.forEach(([d])=>d.open=true);});addEventListener('afterprint',()=>printStates.forEach(([d,o])=>d.open=o));
+
+document.querySelector('.print-page').addEventListener('click',()=>window.print());

@@ -1,7 +1,9 @@
-# Statusposter Veldman
+# Statusposter en statusupdate Veldman
 
-De interactieve statusposter van mijlpaal 1.
+Eén pagina, twee herkenbare onderdelen voor mijlpaal 1.
 
-De tekst staat in `index.html`. De opmaak staat in `style.css`. De knoppen en de tekst in de voorbeeldvensters staan in `app.js`.
+Online: https://sandrotsutsks-png.github.io/statusposter-veldman/
 
-GitHub Pages publiceert vanaf de hoofdmap van de gekozen tak. Open `index.html` in je browser om de poster lokaal te bekijken.
+Bewerk de tekst in index.html en de vormgeving in style.css. app.js bevat de interactieve knoppen. Open index.html lokaal of gebruik GitHub Pages vanaf main, hoofdmap.
+
+De knop onder de statusupdate opent het afdrukvenster. Kies Bewaar als PDF om beide onderdelen in één bestand te bewaren. De losse statusposter.pdf is de eerdere poster van 5 november, zonder statusupdate.
