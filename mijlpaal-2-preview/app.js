@@ -1,0 +1,13 @@
+'use strict';
+function setupTabs(list){
+ const buttons=[...list.querySelectorAll('[role=tab]')];
+ const select=button=>{buttons.forEach(b=>{const on=b===button;b.setAttribute('aria-selected',String(on));b.tabIndex=on?0:-1;const panel=document.getElementById(b.getAttribute('aria-controls'));panel.hidden=!on;panel.classList.toggle('panel-enter',on);});};
+ select(buttons[0]);
+ buttons.forEach((b,i)=>{b.addEventListener('click',()=>select(b));b.addEventListener('keydown',e=>{let n=i;if(['ArrowRight','ArrowDown'].includes(e.key))n=(i+1)%buttons.length;else if(['ArrowLeft','ArrowUp'].includes(e.key))n=(i-1+buttons.length)%buttons.length;else if(e.key==='Home')n=0;else if(e.key==='End')n=buttons.length-1;else return;e.preventDefault();select(buttons[n]);buttons[n].focus();});});
+}
+document.querySelectorAll('[role=tablist]').forEach(setupTabs);
+const progress=document.querySelector('.scroll-progress');let queued=false;function update(){const h=document.documentElement;progress.style.width=(h.scrollTop/Math.max(1,h.scrollHeight-h.clientHeight)*100)+'%';queued=false;}window.addEventListener('scroll',()=>{if(!queued){queued=true;requestAnimationFrame(update);}},{passive:true});update();
+const links=[...document.querySelectorAll('.topbar nav a')];const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)links.forEach(a=>a.classList.toggle('active',a.hash==='#'+e.target.id));}),{rootMargin:'-15% 0px -50% 0px'});links.forEach(a=>obs.observe(document.querySelector(a.hash)));
+let printStates=[];addEventListener('beforeprint',()=>{printStates=[...document.querySelectorAll('details')].map(d=>[d,d.open]);printStates.forEach(([d])=>d.open=true);});addEventListener('afterprint',()=>printStates.forEach(([d,o])=>d.open=o));
+
+document.querySelector('.print-page').addEventListener('click',()=>window.print());
