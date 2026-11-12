@@ -1,4 +1,29 @@
-<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#006438"><meta name="description" content="Statusposter en statusupdate van Voortgangsgesprek 2 bij Veldman Linnenverhuur."><title>Veldman Linnenverhuur | Voortgangsgesprek 2</title><link rel="icon" href="veldman.svg" type="image/svg+xml"><link rel="preload" href="dm-regular.ttf" as="font" type="font/ttf" crossorigin><link rel="preload" href="dm-bold.ttf" as="font" type="font/ttf" crossorigin><link rel="stylesheet" href="style.css"><script src="app.js" defer></script></head><body>
+<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#006438"><meta name="description" content="Statusposter en statusupdate van Voortgangsgesprek 2 bij Veldman Linnenverhuur."><title>Veldman Linnenverhuur | Voortgangsgesprek 2</title><link rel="icon" href="veldman.svg" type="image/svg+xml"><link rel="preload" href="dm-regular.ttf" as="font" type="font/ttf" crossorigin><link rel="preload" href="dm-bold.ttf" as="font" type="font/ttf" crossorigin><link rel="stylesheet" href="style.css"><script src="app.js" defer></script><style>
+.research { background: #e5ebdb; }
+.research-panel { background: var(--paper); border: 1px solid var(--rule); }
+.research-panel > summary { padding: 18px 24px; font-size: 1.3rem; }
+.research-body { padding: 0 clamp(18px,4vw,44px) 26px; }
+.research-body > p { max-width: 78ch; }
+.research-body > h3 { margin: 26px 0 8px; }
+.research-model { display: grid; grid-template-columns: 1fr auto 1fr; gap: 14px; align-items: stretch; margin: 20px 0; }
+.research-model > div { padding: 18px; background: var(--dark); color: var(--paper); }
+.research-model h3 { margin: 8px 0; overflow-wrap: anywhere; }
+.research-relation { align-self: center; text-align: center; font-weight: 700; }
+.research-themes { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 12px; }
+.research-themes > div { padding: 14px; border-top: 3px solid var(--ink); background: #eeeee1; }
+.research-themes h4 { margin: 0 0 6px; }
+.research-themes ul { padding-left: 18px; margin-bottom: 0; }
+.research-steps { padding-left: 24px; }
+.research-steps li { border-top: 1px solid var(--rule); padding: 12px 0 12px 8px; }
+.research-steps p { margin-top: 6px; }
+.research-note { margin-top: 18px; border-left: 4px solid #78a548; padding: 8px 14px; }
+@media (max-width: 760px) {
+  .research-model, .research-themes { grid-template-columns: 1fr; }
+  .research-relation br { display: none; }
+  .research-relation span { display: none; }
+}
+@media print { .research-model > div { background: white; color: var(--ink); border: 1px solid var(--rule); } }
+</style></head><body>
 <a class="skip" href="#inhoud">Ga naar de inhoud</a>
 <header class="topbar"><a href="#start" aria-label="Veldman, naar boven"><img src="veldman.svg" width="156" height="26" alt="Veldman"></a><nav aria-label="Poster en update"><a href="#statusupdate">Statusupdate</a><a href="#verkenning">Statusposter</a></nav><span class="edition">GESPREK 02</span><div class="scroll-progress" aria-hidden="true"></div></header>
 <main id="inhoud">
@@ -57,35 +82,43 @@
 <li>Zijn samenwerking als onafhankelijke variabele en leverbetrouwbaarheid als afhankelijke variabele duidelijk afgebakend?</li>
 <li>Sluit elke deelvraag aan op haar deelthema en helpen de drie deelvragen samen om de hoofdvraag te beantwoorden?</li>
 </ul></div></section>
-<section class="section exploration" id="onderzoek-in-het-kort" aria-labelledby="onderzoek-titel">
+<section class="section research" id="onderzoek-in-het-kort" aria-labelledby="onderzoek-titel">
   <div class="section-heading">
     <p class="eyebrow">Mijlpaal 2</p>
-    <div><h2 id="onderzoek-titel">Onderzoek in het kort</h2></div>
+    <div><h2 id="onderzoek-titel">Ons onderzoek in het kort</h2><p>Wat willen we begrijpen en hoe gaan we dat onderzoeken?</p></div>
   </div>
-  <details class="milestone-outcome" id="kenniskader-in-het-kort">
+  <details class="research-panel" id="kenniskader-in-het-kort" open>
     <summary>Theoretisch kader</summary>
-    <ul>
-      <li><strong>Afhankelijke variabele.</strong> Leverbetrouwbaarheid gaat over leveren op de afgesproken dag, met de afgesproken aantallen voor zover die zijn vastgelegd, en bij de juiste klant of locatie.</li>
-      <li><strong>Mogelijke verklaringen.</strong> Capaciteit van de wasserij, logistiek en transport, het teruggeven van vuil linnen en de samenwerking tussen Veldman en de wasserijen.</li>
-      <li><strong>Centraal thema en gekozen onafhankelijke variabele.</strong> Samenwerking met externe wasserijen. Uit het vooronderzoek bleek dat er al leverafspraken waren, maar dat Veldman beperkt zicht had op de uitvoering. De literatuur helpt om die samenwerking te bekijken via afspraken, informatie en gedrag.</li>
-      <li><strong>Verwachte samenhang.</strong> Goede afstemming kan helpen om afwijkingen eerder te zien en samen bij te sturen. In het veldonderzoek bekijken we hoe dit samenhangt met leverbetrouwbaarheid.</li>
-    </ul>
-    <h3>Drie deelthema’s en tien indicatoren</h3>
-    <ul>
-      <li><strong>Procesafspraken.</strong> Duidelijkheid en eenduidigheid van afspraken. Verdeling van taken en verantwoordelijkheden. Afspraken bij wijzigingen en over wie wordt ingeschakeld bij problemen.</li>
-      <li><strong>Informatievoorziening.</strong> Tijdigheid. Volledigheid. Juistheid en controleerbaarheid. Beschikbaarheid en vindbaarheid.</li>
-      <li><strong>Samenwerkingsgedrag.</strong> Uit jezelf afwijkingen signaleren en melden. Opvolging en terugkoppeling. Samen problemen oplossen.</li>
-    </ul>
+    <div class="research-body">
+      <p>Veldman maakt leverafspraken met externe wasserijen, maar heeft beperkt zicht op wat er bij de klant aankomt. Soms hoort Veldman pas na een melding dat er iets afwijkt. Dat was de aanleiding voor ons onderzoek.</p>
+      <div class="research-model">
+        <div><p class="eyebrow">Onafhankelijke variabele</p><h3>Samenwerking</h3><p>Ons centrale thema. Hoe stemmen Veldman en de wasserijen hun afspraken, informatie en acties op elkaar af?</p></div>
+        <p class="research-relation">Verwachte<br>samenhang <span aria-hidden="true">→</span></p>
+        <div><p class="eyebrow">Afhankelijke variabele</p><h3>Leverbetrouwbaarheid</h3><p>Wordt er op de afgesproken dag geleverd, bij de juiste klant of locatie en in de afgesproken aantallen als die zijn vastgelegd?</p></div>
+      </div>
+      <h3>Waarom samenwerking?</h3>
+      <p>Het vooronderzoek gaf vooral signalen over de afstemming tussen Veldman en de wasserijen. In de literatuur vonden we aanknopingspunten om te kijken naar afspraken, informatie en wat beide partijen doen bij afwijkingen. Ook capaciteit, transport en het teruggeven van vuil linnen kunnen meespelen. Die nemen we mee als mogelijke verklaringen.</p>
+      <h3>Van drie deelthema’s naar tien indicatoren</h3>
+      <div class="research-themes">
+        <div><h4>Procesafspraken</h4><p>Wat spreken beide partijen af?</p><ul><li>Concreetheid en eenduidigheid van afspraken</li><li>Verdeling van taken en verantwoordelijkheden</li><li>Afspraken over wijzigingen en wie je inschakelt bij problemen</li></ul></div>
+        <div><h4>Informatievoorziening</h4><p>Wat weten beide partijen over de levering?</p><ul><li>Tijdigheid</li><li>Volledigheid</li><li>Juistheid en controleerbaarheid</li><li>Beschikbaarheid en vindbaarheid</li></ul></div>
+        <div><h4>Samenwerkingsgedrag</h4><p>Wat doen beide partijen in de praktijk?</p><ul><li>Uit jezelf afwijkingen signaleren en melden</li><li>Opvolging en terugkoppeling</li><li>Samen problemen oplossen</li></ul></div>
+      </div>
+      <p class="research-note">We verwachten dat afstemming kan helpen om afwijkingen eerder te zien en samen bij te sturen. Hoe dit bij Veldman werkt, onderzoeken we in de praktijk.</p>
+    </div>
   </details>
-  <details class="milestone-outcome" id="methodiek-in-het-kort">
+  <details class="research-panel" id="methodiek-in-het-kort" open>
     <summary>Methodiek</summary>
-    <ul>
-      <li><strong>Onderzoeksopzet.</strong> Eerst een verkennende enquête om verschillen tussen wasserijen in kaart te brengen. Daarna interviews om die verschillen beter te begrijpen.</li>
-      <li><strong>Wie we benaderen.</strong> We proberen alle actieve externe wasserijen te bereiken. Voor de interviews kiezen we gericht wasserijen met verschillende werkwijzen en spreken we betrokken medewerkers van Veldman.</li>
-      <li><strong>Per deelvraag.</strong> Elk deelthema heeft één deelvraag. De operationalisatietabel koppelt de indicatoren aan enquêtevragen, interviewvragen en beschikbare documenten.</li>
-      <li><strong>Analyse.</strong> We vatten de enquête samen, ordenen de interviews per thema en leggen de uitkomsten per indicator naast elkaar. Waar mogelijk controleren we uitspraken met documenten en voorbeelden van leveringen.</li>
-      <li><strong>Betrouwbaarheid en validiteit.</strong> We testen de vragenlijst vooraf, gebruiken dezelfde kernvragen en leggen keuzes over selectie en analyse vast. We controleren of de vragen de bedoelde indicatoren meten.</li>
-    </ul>
+    <div class="research-body">
+      <p>We combineren een enquête met interviews. Zo brengen we eerst verschillen in werkwijze in kaart en kunnen we daarna gericht doorvragen.</p>
+      <ol class="research-steps">
+        <li><div><h3>Vragen voorbereiden</h3><p>Elk deelthema heeft één deelvraag. In de operationalisatietabel koppelen we de indicatoren aan vragen en mogelijke documenten. We testen de vragenlijst vooraf op begrijpelijkheid.</p></div></li>
+        <li><div><h3>Enquête uitzetten</h3><p>We proberen alle actieve externe wasserijen te bereiken. Per wasserij vragen we een contactpersoon die zicht heeft op planning, uitvoering en informatie-uitwisseling. We vatten de antwoorden samen om overeenkomsten en verschillen te zien.</p></div></li>
+        <li><div><h3>Gericht interviewen</h3><p>Met de enquête kiezen we wasserijen met verschillende werkwijzen. We spreken ook betrokken medewerkers van Veldman. We gebruiken dezelfde kernvragen en vragen door op concrete leveringen.</p></div></li>
+        <li><div><h3>Antwoorden vergelijken</h3><p>We ordenen de interviews per thema en leggen enquête, interviews en beschikbare documenten per indicator naast elkaar. We leggen onze keuzes en verschillen tussen bronnen vast.</p></div></li>
+      </ol>
+      <p class="research-note"><strong>Een concreet voorbeeld.</strong> Bij een pakbon bekijken we apart wanneer het linnen is geleverd, wanneer de pakbon is verstuurd en wanneer Veldman die ontving. Zo kunnen we leverbetrouwbaarheid en tijdigheid van informatie apart beoordelen.</p>
+    </div>
   </details>
 </section>
 </main>
